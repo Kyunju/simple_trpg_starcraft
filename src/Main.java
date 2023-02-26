@@ -6,7 +6,16 @@ public class Main {
         System.out.println("[안내]자신의 유닛 정보를 입력해주세요");
         Unit myUnit = new Unit();
         myUnit.init();
+        System.out.println();
         myUnit.info();
+        System.out.println("==============================");
+
+        System.out.println("[안내]상대 유닛 정보를 입력해주세요");
+        Unit enemyUnit = new Unit();
+        enemyUnit.init();
+        System.out.println();
+        enemyUnit.info();
+        System.out.println("==============================");
     }
 }
 
@@ -30,8 +39,10 @@ class Unit {
 
     void info() {
         System.out.println("[안내] 생성된 유닛 정보는 다음과 같습니다.");
-        System.out.printf("[안내] %s 유닛이 게임에 참여하였습니다.", name);
-        System.out.printf("[공격력] %s 유닛이 게임에 참여하였습니다.", name);
+        System.out.printf("[안내] %s 유닛이 게임에 참여하였습니다.\n", name);
+        System.out.printf("[공격력] : %d\n", atk);
+        System.out.printf("[방어력] : %d\n", def);
+        System.out.printf("[체력] : %d\n", hp);
     }
 
 }
